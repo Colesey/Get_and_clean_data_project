@@ -34,13 +34,17 @@ train data: y_train.txt | Activity identifier for each observation | Used to cre
 train data: subject_train.txt | Subject identifier for each observation | Used as the subject identifer in the data sets
 
 
-Some additional notes (if avaialble, otherwise you can leave this section out).
+#Creating the tidy datafile
 
-Creating the tidy datafile
+##Getting the raw data
+In the run_analysis.R script the following stages are gone through to download and create the initail untidy dataset.
 
-Guide to create the tidy data file
+1. The file is downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip as a zip file.
+2. The script will place this file in a subdirectory of your working directory called /data
+3. The file is then unzipped into another sub directory called ./UCI HAR Dataset this then contains the uncompressed files
 
-Description on how to create the tidy data file (1. download the data, ...)/
+##Constructing the data set
+The raw data set is provided in components that are assembled into a single data frame to be used in the project. As part of this, we are only using those variables that are a mean() or std() reading  
 
 Cleaning of the data
 
