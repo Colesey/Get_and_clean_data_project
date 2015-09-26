@@ -7,7 +7,7 @@ and a full description of the data can be found by following the link.
 
 
 ## Raw Data
-The raw data has been collected from accelerometer and gyroscope of a Samsung Galaxy S II whilst subjects conducct various activities like walking, standing and sitting (full list in the Codebook.md).  
+The raw data has been collected from accelerometer and gyroscope of a Samsung Galaxy S II whilst subjects conduct various activities like walking, standing and sitting (full list in the Codebook.md).  
 
 ## Data processing and scripts
 The processing of the data all takes place in a single script run_analysis.R
@@ -19,7 +19,7 @@ This script conducts the following steps (described in more detail in the Codebo
 4. Adds the descriptive activity names to the rows
 5. Amends the column names to be more readable
 6. These steps produce a tidy data set named main_data that meets the objectives of the tidy data guidelines.
-7. And finally, creat a seperate data frame called mean_readings that is a tidy data set with the average of each variable for each activity and each subject. This is written out as a text file called mean_readings.txt.
+7. And finally, create a separate data frame called mean_readings that is a tidy data set with the average of each variable for each activity and each subject. This is written out as a text file called mean_readings.txt.
 
 ## Outputs and files
 This repo contains the following files:
