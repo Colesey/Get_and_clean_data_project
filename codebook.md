@@ -44,9 +44,16 @@ In the run_analysis.R script the following stages are gone through to download a
 3. The file is then unzipped into another sub directory called ./UCI HAR Dataset this then contains the uncompressed files
 
 ##Constructing the data set
-The raw data set is provided in components that are assembled into a single data frame to be used in the project. As part of this, we are only using those variables that are a mean() or std() reading  
+The raw data set is divided into test and train data with both provided in components that are assembled into a single data frame to be used in the project. 
+For each of the test and train data, a data frame is built using the X_test.tx and X_train.txt files. To both were added the column names by using the features.txt file as a list. 
+As we are only using those variables that are a mean() or std() reading, using the grep function the column indices for these were identified. Using the index, the data frames were reduced to only those columns containing the mean() or std() in thier names.
+To each of the data frames, the subject and activitiy identifiers were added to the left from the respective subject.txt and the y_trian.txt and y_test.txt files. 
+Laastly, the two train and test data frames are comined using the rbind function to creat the intermediate tidy data set called main_data
 
-Cleaning of the data
+##Cleaning of the data
+the following two processes were used to create a more readable data set by adding descriptive names in the activity variable and changing the measurment variable names to a fuller descritptive name.
+The activity_labels.txt contains the desctiptive names for the actvitiy numeric identifier in the main_data object. This file was read in and converted to a character list (from factors) and applied to the main_data$activities column using the numeric identifier as a index to the list.
+
 
 Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
 
