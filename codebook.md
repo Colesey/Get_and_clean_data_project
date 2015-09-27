@@ -124,72 +124,74 @@ Variable | Description | Class | Unit of measure | Levels of Descriptor
 ---------------------------------|-----------------------|----------|--------|-------------------------|
 subject | Unique number that identifies the subject in each observation | integer | none | none
 activity | Description of the activity being undertaken by the subject for the observation | character | none | There are 6 levels: walking, sitting laying, standing, walking_downstairs, walking_upstairs
-time body accelerometer-mean()-X"
-time body accelerometer-mean()-Y"                 
-time body accelerometer-mean()-Z"
-time body accelerometer-std()-X"                  
-time body accelerometer-std()-Y
-time body accelerometer-std()-Z"                  
-time gravity accelerometer-mean()-X
-time gravity accelerometer-mean()-Y"              
-time gravity accelerometer-mean()-Z
-time gravity accelerometer-std()-X"               
-time gravity accelerometer-std()-Y
-time gravity accelerometer-std()-Z"               
-time body accelerometer jerk-mean()-X
-time body accelerometer jerk-mean()-Y"            
-time body accelerometer jerk-mean()-Z
-time body accelerometer jerk-std()-X"             
-time body accelerometer jerk-std()-Y
-time body accelerometer jerk-std()-Z"             
-time body gyrometer-mean()-X
-time body gyrometer-mean()-Y"                     
-time body gyrometer-mean()-Z
-time body gyrometer-std()-X"                      
-time body gyrometer-std()-Y
-time body gyrometer-std()-Z"                      
-time body gyrometer jerk-mean()-X
-ime body gyrometer jerk-mean()-Y"                
-time body gyrometer jerk-mean()-Z
-time body gyrometer jerk-std()-X"                 
-time body gyrometer jerk-std()-Y
-time body gyrometer jerk-std()-Z"                 
-time body accelerometer magnitude-mean()
-time body accelerometer magnitude-std()"          
-time gravity accelerometer magnitude-mean()
-time gravity accelerometer magnitude-std()"       
-time body accelerometer jerk magnitude-mean()
-time body accelerometer jerk magnitude-std()"     
-time body gyrometer magnitude-mean()
-time body gyrometer magnitude-std()"              
-time body gyrometer jerk magnitude-mean()
-time body gyrometer jerk magnitude-std()"         
-fft body accelerometer-mean()-X
-fft body accelerometer-mean()-Y"                  
-fft body accelerometer-mean()-Z
-fft body accelerometer-std()-X"                   
-fft body accelerometer-std()-Y
-fft body accelerometer-std()-Z"                   
-fft body accelerometer jerk-mean()-X
-fft body accelerometer jerk-mean()-Y"             
-fft body accelerometer jerk-mean()-Z
-fft body accelerometer jerk-std()-X"              
-fft body accelerometer jerk-std()-Y
-fft body accelerometer jerk-std()-Z"              
-fft body gyrometer-mean()-X
-fft body gyrometer-mean()-Y"                      
-fft body gyrometer-mean()-Z
-fft body gyrometer-std()-X"                       
-fft body gyrometer-std()-Y
-fft body gyrometer-std()-Z"                       
-fft body accelerometer magnitude-mean()
-fft body accelerometer magnitude-std()"           
-fft body body accelerometer jerk magnitude-mean()
-fft body body accelerometer jerk magnitude-std()" 
-fft body body gyrometer magnitude-mean()
-fft body body gyrometer magnitude-std()"          
-fft body body gyrometer jerk magnitude-mean()
-fft body body gyrometer jerk magnitude-std()"
+time body accelerometer-mean()-X | accelerometer measurment | numeric | time | none
+time body accelerometer-mean()-Y | accelerometer measurment | numeric | time | none                 
+time body accelerometer-mean()-Z | accelerometer measurment | numeric | time | none
+time body accelerometer-std()-X | accelerometer measurment | numeric | time | none    
+time body accelerometer-std()-Y | accelerometer measurment | numeric | time | none
+time body accelerometer-std()-Z | accelerometer measurment | numeric | time | none               
+time gravity accelerometer-mean()-X | accelerometer measurment | numeric | time | none
+time gravity accelerometer-mean()-Y | accelerometer measurment | numeric | time | none           
+time gravity accelerometer-mean()-Z | accelerometer measurment | numeric | time | none
+time gravity accelerometer-std()-X | accelerometer measurment | numeric | time | none           
+time gravity accelerometer-std()-Y | accelerometer measurment | numeric | time | none
+time gravity accelerometer-std()-Z | accelerometer measurment | numeric | time | none           
+time body accelerometer jerk-mean()-X | accelerometer measurment | numeric | time | none
+time body accelerometer jerk-mean()-Y | accelerometer measurment | numeric | time | none       
+time body accelerometer jerk-mean()-Z | accelerometer measurment | numeric | time | none
+time body accelerometer jerk-std()-X | accelerometer measurment | numeric | time | none        
+time body accelerometer jerk-std()-Y | accelerometer measurment | numeric | time | none
+time body accelerometer jerk-std()-Z | accelerometer measurment | numeric | time | none         
+time body gyrometer-mean()-X | gyrometer measurment| numeric| time | none
+time body gyrometer-mean()-Y | gyrometer measurment| numeric| time | none             
+time body gyrometer-mean()-Z | gyrometer measurment| numeric| time | none
+time body gyrometer-std()-X | gyrometer measurment| numeric| time | none                
+time body gyrometer-std()-Y | gyrometer measurment| numeric| time | none
+time body gyrometer-std()-Z | gyrometer measurment| numeric| time | none                 
+time body gyrometer jerk-mean()-X | gyrometer jerk measurment| numeric| time | none
+ime body gyrometer jerk-mean()-Y | gyrometer jerk measurment| numeric| time | none          
+time body gyrometer jerk-mean()-Z | gyrometer jerk measurment| numeric| time | none
+time body gyrometer jerk-std()-X | gyrometer jerk measurment| numeric| time | none            
+time body gyrometer jerk-std()-Y | gyrometer jerk measurment| numeric| time | none
+time body gyrometer jerk-std()-Z | gyrometer jerk measurment| numeric| time | none             
+time body accelerometer magnitude-mean() | accelerometer magnitude measurement| numeric| time | none
+time body accelerometer magnitude-std() | accelerometer magnitude measurement| numeric| time | none    
+time gravity accelerometer magnitude-mean() | accelerometer magnitude measurement| numeric| time | none
+time gravity accelerometer magnitude-std() | accelerometer magnitude measurement| numeric| time | none  
+time body accelerometer jerk magnitude-mean() | accelerometer magnitude measurement| numeric| time | none
+time body accelerometer jerk magnitude-std() | accelerometer magnitude measurement| numeric| time | none
+time body gyrometer magnitude-mean() | gyrometer magnitude measurment| numeric| time | none  
+time body gyrometer magnitude-std() | gyrometer magnitude measurment| numeric| time | none        
+time body gyrometer jerk magnitude-mean() | gyrometer jerk magnitude measurment| numeric| time | none
+time body gyrometer jerk magnitude-std() | gyrometer jerk magnitude measurment| numeric| time | none 
+fft body accelerometer-mean()-X |fast fourier transform accelerometer measurment | numeric | time | none
+fft body accelerometer-mean()-Y |fast fourier transform accelerometer measurment | numeric | time | none              
+fft body accelerometer-mean()-Z |fast fourier transform accelerometer measurment | numeric | time | none
+fft body accelerometer-std()-X |fast fourier transform accelerometer measurment | numeric | time | none            
+fft body accelerometer-std()-Y |fast fourier transform accelerometer measurment | numeric | time | none
+fft body accelerometer-std()-Z |fast fourier transform accelerometer measurment | numeric | time | none              
+fft body accelerometer jerk-mean()-X |fast fourier transform accelerometer jerk measurment | numeric | time | none
+fft body accelerometer jerk-mean()-Y |fast fourier transform accelerometer jerk measurment | numeric | time | none        
+fft body accelerometer jerk-mean()-Z |fast fourier transform accelerometer jerk measurment | numeric | time | none
+fft body accelerometer jerk-std()-X |fast fourier transform accelerometer jerk measurment | numeric | time | none       
+fft body accelerometer jerk-std()-Y |fast fourier transform accelerometer jerk measurment | numeric | time | none
+fft body accelerometer jerk-std()-Z |fast fourier transform accelerometer jerk measurment | numeric | time | none
+fft body gyrometer-mean()-X |fast fourier transform gyrometer measurment | numeric | time | none
+fft body gyrometer-mean()-Y |fast fourier transform gyrometer measurment | numeric | time | none                 
+fft body gyrometer-mean()-Z |fast fourier transform gyrometer measurment | numeric | time | none
+fft body gyrometer-std()-X |fast fourier transform gyrometer measurment | numeric | time | none                 
+fft body gyrometer-std()-Y |fast fourier transform gyrometer measurment | numeric | time | none
+fft body gyrometer-std()-Z |fast fourier transform gyrometer measurment | numeric | time | none                  
+fft body accelerometer magnitude-mean() |fast fourier transform accelerometer magnitude measurment | numeric | time | none
+fft body accelerometer magnitude-std() |fast fourier transform accelerometer magnitude measurment | numeric | time | none      
+fft body body accelerometer jerk magnitude-mean() |fast fourier transform accelerometer jerk magnitude measurment | numeric | time | none
+fft body body accelerometer jerk magnitude-std() |fast fourier transform accelerometer jerk magnitude measurment | numeric | time | none
+fft body body gyrometer magnitude-mean() |fast fourier transform gyrometer magnitude measurment | numeric | time | none
+fft body body gyrometer magnitude-std() |fast fourier transform gyrometer magnitude measurment | numeric | time | none 
+fft body body gyrometer jerk magnitude-mean() |fast fourier transform gyrometer jerk magnitude measurment | numeric | time | none
+fft body body gyrometer jerk magnitude-std() |fast fourier transform gyrometer jerk magnitude measurment | numeric | time | none
+
+
 
 
 
