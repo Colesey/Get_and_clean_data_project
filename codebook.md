@@ -61,11 +61,21 @@ Laastly, the two train and test data frames are comined using the rbind function
 the following two processes were used to create a more readable data set by adding descriptive names in the activity variable and changing the measurment variable names to a fuller descritptive name.
 The activity_labels.txt contains the desctiptive names for the actvitiy numeric identifier in the main_data object. This file was read in and converted to a character list (from factors) and applied to the main_data$activities column using the numeric identifier as a index to the list.
 
-The following column names were expanded to be more descriptive:
+The column names were expanded to be more descriptive, for each occurance of the following text in the column names shown in the table as Original Variable Name, this was changed using the gsub() function to the text shown in the Tidy Variable Name:
 
 
-
-
+Original Variable Name Contains: | Tidy Variable Name Contains: 
+----------|-------------
+tBodyAcc| time body accelerometer 
+tGravityAcc | time gravity accelerometer
+tBodyGyro | time body gyrometer
+fGravityAcc | fft body accelerometer
+fBodyAcc" | fft body accelerometer
+fBodyGyro | fft body gyrometer
+fBodyBodyGyro | fft body body gyrometer
+fBodyBodyAcc | fft body body accelerometer
+Jerk | jerk
+Mag | magnitude
 
 
 Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
