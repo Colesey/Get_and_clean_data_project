@@ -1,9 +1,11 @@
+#Create the environment:
 library(dplyr)
 
 if (!file.exists("./data")) {
         dir.create("./data")
 }
 # Download and unzip the raw data files
+print("Downloading raw data....")
 
 if (!file.exists("./data/smartphone.zip")) {
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -20,6 +22,7 @@ features <- as.character(features$V2)
 mean_std <- grep("-(mean|std)\\(\\)", features) 
 
 #==========Build the test data DF:=================
+print("Building the test data frame.....")
 
 #Read in the file of observations from test data then add the column names using features 
 test_data <- read.table("./UCI HAR Dataset/test/X_test.txt")
@@ -39,6 +42,7 @@ test_data <- cbind(subject_test, activity_test, test_data)
 #==========Build the train data DF:=================
 
 #Do the same for the train data DF as for the test data above
+print("Building the train data frame.....")
 train_data <- read.table("./UCI HAR Dataset/train/X_train.txt")
 names(train_data) <- features
 train_data <- train_data[,mean_std]
@@ -51,6 +55,7 @@ train_data <- cbind(subject_train, activity_train, train_data)
 #==========Build the single tidy data DF called main_data:=================
 
 #Combine the two sets of observations into a single data frame
+print("Building the tidy data frame main_data....")
 main_data <- rbind(test_data, train_data)
 
 #Add the meaningful activity descriptions
@@ -73,6 +78,7 @@ names(main_data) <- gsub("Jerk", " jerk", names(main_data))
 names(main_data) <- gsub("Mag", " magnitude", names(main_data))
 
 #===========Create the grouped and summarised DF using dplyr and create the txt file==================
+print("Building the summary tidy data frame mean_readings....")
 mean_readings <- group_by(main_data, subject, activity)
 mean_readings <- summarise_each(mean_readings, funs(mean))
 write.table(mean_readings, file = "./data/mean_readings.txt", row.name = FALSE)
