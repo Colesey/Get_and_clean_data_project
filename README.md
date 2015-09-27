@@ -43,39 +43,39 @@ and stores it in a file called smartphone.zip in the ./data directory.
 
 **Unzip the raw data.**
 
-Checks to see if it has already been loaded, if not uses the unzip() function to unzip the file. It creates a new directory in the working directory called "UCI HAR Dataset" that contains all the seperate files used o construct the tidy data sets.
+Checks to see if it has already been loaded, if not uses the unzip() function to unzip the file. It creates a new directory in the working directory called "UCI HAR Dataset" that contains all the separate files used o construct the tidy data sets.
 
 **Create the column names**
 
-Using read.table() function, read in the features.txt file into a variable called fatures.
+Using read.table() function, read in the features.txt file into a variable called features.
 Convert it from a factor to a list.
 
-Find the colunm names containing mean() and std() that are to be used in the tidy data set. 
-Using the grep() function, search in the features lsit for mean() and std() create the index in the vector mean_std
+Find the column names containing mean() and std() that are to be used in the tidy data set. 
+Using the grep() function, search in the features list for mean() and std() create the index in the vector mean_std
 
 **Build the first data frame for the test data:**
 
 Load in the X_test.txt file in to test_data object.
-Add the column names from the feature list and then selct only those columns needed using the mean_std index.
+Add the column names from the feature list and then select only those columns needed using the mean_std index.
 Read in the subject identifiers from the subject.txt file and add the varible name "subject" to it.
 Read in the activities identifiers from the y_test.txt file and add the variable name "activities" to it.
-Combine the three objects into a single data frame called test_data. The subject variable is added to the left followed by actvitiy and then the test_data using the cbind() function.
+Combine the three objects into a single data frame called test_data. The subject variable is added to the left followed by activitiy and then the test_data using the cbind() function.
 
 ** The train data data frame is built** in the same way as the test data from the test data sub-directory and substituting train for test.
 
-Uing the rbind() function, test_data and train_data are combined to create main_data data frame. This is the baisis of the tidy data set.
+Using the rbind() function, test_data and train_data are combined to create main_data data frame. This is the basis of the tidy data set.
 
 **Cleaning the main_data object:**
 
-The activitiy references in the activitiy variable are converted to descriptive terms by:
+The activity references in the activity variable are converted to descriptive terms by:
 reading in the activity_labels.txt file into the activities object and converted to character list.
-Then the activity variable in main_data is amended using the de4scriptive terms in the activities variable.
+Then the activity variable in main_data is amended using the descriptive terms in the activities variable.
 
 Using gsub() function, the column names in the main_data object are amended to be more descriptive (see codebook.md)
 
 **This results in  a tidy data main_data data frame.**
 
-**Creating the independant, grouped and summarised data set called mean_readings**
+**Creating the independent, grouped and summarised data set called mean_readings**
 
 mean_readings is created by grouping main_data by subject and activity
 mean_readings is summarised using the summarise_each() function using the mean function across all the variables
