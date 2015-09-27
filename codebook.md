@@ -36,6 +36,13 @@ train data: subject_train.txt | Subject identifier for each observation | Used a
 
 #Creating the tidy datafile
 
+The script run_analysis.R is the only script in the project and it runs through the following steps. The script makes use of the dplyr package.
+
+The outputs from this script are two tidy data sets:
+
+1. main_data - this is the reconstructed data frame from the raw test and train data with only the varibles that are either mean() of std().
+2. mean_readings.txt - this is the text file of the summarised main_data data set with the average of each variable for each activity and each subject
+
 ##Getting the raw data
 In the run_analysis.R script the following stages are gone through to download and create the initail untidy dataset.
 
@@ -53,6 +60,12 @@ Laastly, the two train and test data frames are comined using the rbind function
 ##Cleaning of the data
 the following two processes were used to create a more readable data set by adding descriptive names in the activity variable and changing the measurment variable names to a fuller descritptive name.
 The activity_labels.txt contains the desctiptive names for the actvitiy numeric identifier in the main_data object. This file was read in and converted to a character list (from factors) and applied to the main_data$activities column using the numeric identifier as a index to the list.
+
+The following column names were expanded to be more descriptive:
+
+
+
+
 
 
 Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
