@@ -78,16 +78,120 @@ Jerk | jerk
 Mag | magnitude
 
 
-Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
+#Description of the variables in the main_data file
+##Varibale present in the main_data object:
+[1] "subject"                                           "activity"                                         
+ [3] "time body accelerometer-mean()-X"                  "time body accelerometer-mean()-Y"                 
+ [5] "time body accelerometer-mean()-Z"                  "time body accelerometer-std()-X"                  
+ [7] "time body accelerometer-std()-Y"                   "time body accelerometer-std()-Z"                  
+ [9] "time gravity accelerometer-mean()-X"               "time gravity accelerometer-mean()-Y"              
+[11] "time gravity accelerometer-mean()-Z"               "time gravity accelerometer-std()-X"               
+[13] "time gravity accelerometer-std()-Y"                "time gravity accelerometer-std()-Z"               
+[15] "time body accelerometer jerk-mean()-X"             "time body accelerometer jerk-mean()-Y"            
+[17] "time body accelerometer jerk-mean()-Z"             "time body accelerometer jerk-std()-X"             
+[19] "time body accelerometer jerk-std()-Y"              "time body accelerometer jerk-std()-Z"             
+[21] "time body gyrometer-mean()-X"                      "time body gyrometer-mean()-Y"                     
+[23] "time body gyrometer-mean()-Z"                      "time body gyrometer-std()-X"                      
+[25] "time body gyrometer-std()-Y"                       "time body gyrometer-std()-Z"                      
+[27] "time body gyrometer jerk-mean()-X"                 "time body gyrometer jerk-mean()-Y"                
+[29] "time body gyrometer jerk-mean()-Z"                 "time body gyrometer jerk-std()-X"                 
+[31] "time body gyrometer jerk-std()-Y"                  "time body gyrometer jerk-std()-Z"                 
+[33] "time body accelerometer magnitude-mean()"          "time body accelerometer magnitude-std()"          
+[35] "time gravity accelerometer magnitude-mean()"       "time gravity accelerometer magnitude-std()"       
+[37] "time body accelerometer jerk magnitude-mean()"     "time body accelerometer jerk magnitude-std()"     
+[39] "time body gyrometer magnitude-mean()"              "time body gyrometer magnitude-std()"              
+[41] "time body gyrometer jerk magnitude-mean()"         "time body gyrometer jerk magnitude-std()"         
+[43] "fft body accelerometer-mean()-X"                   "fft body accelerometer-mean()-Y"                  
+[45] "fft body accelerometer-mean()-Z"                   "fft body accelerometer-std()-X"                   
+[47] "fft body accelerometer-std()-Y"                    "fft body accelerometer-std()-Z"                   
+[49] "fft body accelerometer jerk-mean()-X"              "fft body accelerometer jerk-mean()-Y"             
+[51] "fft body accelerometer jerk-mean()-Z"              "fft body accelerometer jerk-std()-X"              
+[53] "fft body accelerometer jerk-std()-Y"               "fft body accelerometer jerk-std()-Z"              
+[55] "fft body gyrometer-mean()-X"                       "fft body gyrometer-mean()-Y"                      
+[57] "fft body gyrometer-mean()-Z"                       "fft body gyrometer-std()-X"                       
+[59] "fft body gyrometer-std()-Y"                        "fft body gyrometer-std()-Z"                       
+[61] "fft body accelerometer magnitude-mean()"           "fft body accelerometer magnitude-std()"           
+[63] "fft body body accelerometer jerk magnitude-mean()" "fft body body accelerometer jerk magnitude-std()" 
+[65] "fft body body gyrometer magnitude-mean()"          "fft body body gyrometer magnitude-std()"          
+[67] "fft body body gyrometer jerk magnitude-mean()"     "fft body body gyrometer jerk magnitude-std()"
 
-Description of the variables in the tiny_data.txt file
+#Dimensions of the dataset
+The dimentsions of main_data are 10299 rows and 68 columns
 
-General description of the file including:
+#Summary of the data
 
-Dimensions of the dataset
-Summary of the data
-Variables present in the dataset
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+Variable | Description | Class | Unit of measure | Levels of Descriptor
+---------------------------------|-----------------------|----------|--------|-------------------------|
+subject | Unique number that identifies the subject in each observation | integer | none | none
+activity | Description of the activity being undertaken by the subject for the observation | character | none | There are 6 levels: walking, sitting laying, standing, walking_downstairs, walking_upstairs
+time body accelerometer-mean()-X"
+time body accelerometer-mean()-Y"                 
+time body accelerometer-mean()-Z"
+time body accelerometer-std()-X"                  
+time body accelerometer-std()-Y
+time body accelerometer-std()-Z"                  
+time gravity accelerometer-mean()-X
+time gravity accelerometer-mean()-Y"              
+time gravity accelerometer-mean()-Z
+time gravity accelerometer-std()-X"               
+time gravity accelerometer-std()-Y
+time gravity accelerometer-std()-Z"               
+time body accelerometer jerk-mean()-X
+time body accelerometer jerk-mean()-Y"            
+time body accelerometer jerk-mean()-Z
+time body accelerometer jerk-std()-X"             
+time body accelerometer jerk-std()-Y
+time body accelerometer jerk-std()-Z"             
+time body gyrometer-mean()-X
+time body gyrometer-mean()-Y"                     
+time body gyrometer-mean()-Z
+time body gyrometer-std()-X"                      
+time body gyrometer-std()-Y
+time body gyrometer-std()-Z"                      
+time body gyrometer jerk-mean()-X
+ime body gyrometer jerk-mean()-Y"                
+time body gyrometer jerk-mean()-Z
+time body gyrometer jerk-std()-X"                 
+time body gyrometer jerk-std()-Y
+time body gyrometer jerk-std()-Z"                 
+time body accelerometer magnitude-mean()
+time body accelerometer magnitude-std()"          
+time gravity accelerometer magnitude-mean()
+time gravity accelerometer magnitude-std()"       
+time body accelerometer jerk magnitude-mean()
+time body accelerometer jerk magnitude-std()"     
+time body gyrometer magnitude-mean()
+time body gyrometer magnitude-std()"              
+time body gyrometer jerk magnitude-mean()
+time body gyrometer jerk magnitude-std()"         
+fft body accelerometer-mean()-X
+fft body accelerometer-mean()-Y"                  
+fft body accelerometer-mean()-Z
+fft body accelerometer-std()-X"                   
+fft body accelerometer-std()-Y
+fft body accelerometer-std()-Z"                   
+fft body accelerometer jerk-mean()-X
+fft body accelerometer jerk-mean()-Y"             
+fft body accelerometer jerk-mean()-Z
+fft body accelerometer jerk-std()-X"              
+fft body accelerometer jerk-std()-Y
+fft body accelerometer jerk-std()-Z"              
+fft body gyrometer-mean()-X
+fft body gyrometer-mean()-Y"                      
+fft body gyrometer-mean()-Z
+fft body gyrometer-std()-X"                       
+fft body gyrometer-std()-Y
+fft body gyrometer-std()-Z"                       
+fft body accelerometer magnitude-mean()
+fft body accelerometer magnitude-std()"           
+fft body body accelerometer jerk magnitude-mean()
+fft body body accelerometer jerk magnitude-std()" 
+fft body body gyrometer magnitude-mean()
+fft body body gyrometer magnitude-std()"          
+fft body body gyrometer jerk magnitude-mean()
+fft body body gyrometer jerk magnitude-std()"
+
+
 
 Variable 1 (repeat this section for all variables in the dataset)
 
