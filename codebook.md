@@ -300,6 +300,7 @@ using str(main_data) function
  
 ## Summary for mean_readings text file
 The mean_readings data set uses the same data as main_data grouped by subject and activity with the mean of the measurments.
+The column names for the measurements are amended to add the "mean of measurement for:" to show they are average values.
 It has been output as a text file called mean_readings.txt
 
 #The str() for mean_readings is as follows:
