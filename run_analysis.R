@@ -81,10 +81,14 @@ names(main_data) <- gsub("Mag", " magnitude", names(main_data))
 print("Building the summary tidy data frame mean_readings....")
 mean_readings <- group_by(main_data, subject, activity)
 mean_readings <- summarise_each(mean_readings, funs(mean))
+#Amend the column names to reflect that they are mean readings
+for(i in 3:ncol(mean_readings)){
+        colnames(mean_readings)[i] <- paste("mean of measurements for: ", colnames(mean_readings)[i])
+}
 write.table(mean_readings, file = "./data/mean_readings.txt", row.name = FALSE)
 
 
 #===========tidy up the environment===========
 #just leave the main_data and mean_readings DFs
-rm(activities, features, activity_test, activity_train, subject_test, subject_train, test_data, train_data, mean_std)
+rm(activities, features, activity_test, activity_train, subject_test, subject_train, test_data, train_data, mean_std, i)
 
