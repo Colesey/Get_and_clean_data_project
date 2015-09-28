@@ -79,6 +79,7 @@ Using gsub() function, the column names in the main_data object are amended to b
 
 mean_readings is created by grouping main_data by subject and activity
 mean_readings is summarised using the summarise_each() function using the mean function across all the variables
+The column names are amended for those that have the mean() function apllied to add "mean of measurements for:" to refelect the fact that they are now means of the actual measurements.
 mean_readings is output as a txt file using write.tabel and row.names = FALSE to a file called mean_readings.txt in the ./data directory.
 
 Finally, the environment is cleaned up by removing the intermediate objects leaving only main_data and mean_readings.
